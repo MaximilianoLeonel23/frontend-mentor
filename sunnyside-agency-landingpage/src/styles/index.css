@@ -1,3 +1,107 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary colors */
+    --color-primary-soft-red: 7deg 99% 70%;
+    --color-primary-yellow: 51deg, 100%, 49%;
+    --color-primary-cyan: 167deg, 40%, 24%;
+    --color-primary-blue: 198deg, 62%, 26%;
+    --color-primary-mcyan: 168deg, 34%, 41%;
+    /* Neutral colors */
+    --color-neutral-ddblue: 212deg, 27%, 19%;
+    --color-neutral-dgblue: 213deg, 9%, 39%;
+    --color-neutral-dblue: 232deg, 10%, 55%;
+    --color-neutral-blue: 210deg, 4%, 67%;
+    --color-neutral-white: 0deg, 0%, 100%;
+  }
+}
+
+/* Soft red: hsl(7, 99%, 70%)
+Yellow: hsl(51, 100%, 49%)
+Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
+Dark blue (photography text): hsl(198, 62%, 26%)
+Dark moderate cyan (footer): hsl(168, 34%, 41%)
+Neutral
+Very dark desaturated blue: hsl(212, 27%, 19%)
+Very dark grayish blue: hsl(213, 9%, 39%)
+Dark grayish blue: hsl(232, 10%, 55%)
+Grayish blue: hsl(210, 4%, 67%)
+White: hsl(0, 0%, 100%) */
+.menu-deco {
+  @apply bg-neutral-white w-24 h-12;
+  clip-path: polygon(100% 0%, 100% 100%, 50% 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.contact-btn {
+  @apply font-fraunces font-bold text-neutral-ddblue text-sm py-3.5 px-7 rounded-full;
+  background-color: #ffffff;
+  transition: 300ms;
+}
+
+.contact-btn:hover {
+  @apply text-neutral-white;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-btn-mobile {
+  @apply font-fraunces font-bold text-neutral-ddblue bg-primary-yellow text-sm py-3.5 px-7 rounded-full;
+}
+
+.navbar-link {
+  @apply font-barlow text-neutral-white;
+}
+
+.navbar-link-mobile {
+  @apply font-barlow text-neutral-dblue  font-semibold;
+}
+
+.footer-link {
+  @apply font-barlow text-primary-cyan;
+}
+
+.footer-link:hover {
+  @apply text-neutral-white transition duration-300;
+}
+
+.underlining-yellow::after {
+  @apply bg-primary-yellow opacity-20 rounded-full;
+  content: "";
+  position: absolute;
+  width: 120%;
+  z-index: -20;
+  height: 0.75rem;
+  bottom: -0.25rem;
+  left: -10%;
+  transition: opacity 300ms;
+}
+
+.underlining-red::after {
+  @apply bg-primary-soft-red opacity-20 rounded-full;
+  content: "";
+  position: absolute;
+  width: 120%;
+  z-index: -20;
+  height: 0.75rem;
+  bottom: -0.25rem;
+  left: -10%;
+  transition: opacity 300ms;
+}
+
+.underlining-yellow:hover::after {
+  @apply opacity-100;
+  transform: scaleX(1);
+}
+
+.underlining-red:hover::after {
+  @apply opacity-100;
+  transform: scaleX(1);
+}
+
+.social-media {
+  @apply fill-primary-cyan transition duration-300;
+}
