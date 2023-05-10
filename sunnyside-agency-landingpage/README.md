@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://sunnyside-ten-chi.vercel.app/)
-- Live Site URL: [Add live site URL here](https://sunnyside-ten-chi.vercel.app/)
+- Solution URL: [https://sunnyside-ten-chi.vercel.app/]
+- Live Site URL: [https://sunnyside-ten-chi.vercel.app/]
 
 ## My process
 
